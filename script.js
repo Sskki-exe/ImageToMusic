@@ -81,7 +81,7 @@ function processPixels(pixels, width, height) {
 
   // Usage
   const k = 12; // Number of clusters (desired colors in the palette)
-  const maxIterations = 20; // Maximum number of iterations
+  const maxIterations = 100; // Maximum number of iterations
   const [colorPalette, centroidIdx] = kMeansClustering(pixelArray, k, maxIterations);
 
   for (let i = 0; i < pixelArray.length; i += 1) {
