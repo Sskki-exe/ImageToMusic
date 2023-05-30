@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image to Music</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #809BCE;
+            color: white;
+            padding-top: 6vw;
+            padding-bottom: 4vw;
+            text-align: center;
+            margin-bottom: 2vw;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 8vw;
+        }
+        p {
+            font-size: 6vw;
+            display: none;
+        }
+
+        .button {
+            background-color: #B8E0D2;
+            border: none;
+            margin: 1vw;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 7vw;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="header">
+        <h1>Image to Music</h1>
+    </div>
+    <center>
+        <p >Original</p>
+        <canvas id="canvas" height="0"></canvas><br>
+        <p>K-Means Clustered Image</p>
+        <canvas id="canvas2" height="0"></canvas><br>
+        <p>Extracted Color Palette</p>
+        <canvas id="canvas3" height="0"></canvas><br>
+        <p>Notes</p>
+        <p id="outputText"></p>
+
+        <input type="file" id="imageFileInput" accept="image/*" style="display: none;" />
+        <button class="button" onclick="document.getElementById('imageFileInput').click()"><i
+                class="fa fa-upload"></i></button>
+        <button id="playButton" class="button"><i class="fa fa-play"></i></button>
+        <img src="idea.jpg" style="margin-top: 5vw; width: 95vw;">
+    </center>
+    <script src="script.js"></script>
+</body>
+
+</html>
